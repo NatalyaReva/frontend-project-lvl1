@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-const privetstvie = () =>  {
+import getUserName from "../src/cli.js";
+const greetings = () => {
   console.log( 'Welcome to the Brain Games!' );
 }
-privetstvie();
+greetings();
+getUserName();
