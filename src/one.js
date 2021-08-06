@@ -22,7 +22,7 @@ const evenOrOdd = (result) => {
 };
 
 // Вопрос-ответ с пользователем
-const questionAnswer = () => {
+const questionAnswer = (nameUser) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no" ');
   let i = 0;
   for (i; i < 3; i += 1) {
@@ -33,12 +33,12 @@ const questionAnswer = () => {
       console.log('Correct!');
     } else {
       console.log(`${answer} is wrong answer;(. Correct answer was ${evenOrOdd(result)}`);
-      console.log("Let's try  again, kjkjk");
+      console.log(`Let's try  again, ${nameUser}!`);
       break;
     }
   }
   if (i > 2) {
-    console.log('Congratulations, ggfgf');
+    console.log(`Congratulations, ${nameUser}!`);
   }
 };
 export default questionAnswer;

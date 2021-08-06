@@ -5,8 +5,4 @@ import getUserName from '../src/cli.js';
 import questionAnswer from '../src/one.js';
 
 greetings();
-getUserName();
-questionAnswer();
-
-//const userName = getUserName();
-//console.log(`jhjhu, ${userName}`);
+questionAnswer(getUserName());
