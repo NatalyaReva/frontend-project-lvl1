@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 
 //  Вывод рандомного числа
-const getRandomNumber = () => {
+export const getRandomNumber = () => {
   const randomNumber = Math.round(Math.random() * 101);
   return randomNumber;
 };
 
 //  Получение ответа от пользователя
-const getUserAnswer = () => {
+export const getUserAnswer = () => {
   const userAnswer = readlineSync.question('Your answer: ');
 
   return userAnswer;
