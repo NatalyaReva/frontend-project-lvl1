@@ -1,4 +1,4 @@
-import { getRandomNumber, getUserAnswer } from './one.js';
+import { getRandomNumber, getUserAnswer } from './even.js';
 
 //  Рандомные операции с рандомными числами
 
