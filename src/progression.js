@@ -1,4 +1,4 @@
-import { getRandomNumber, getUserAnswer } from './one.js';
+import { getRandomNumber, getUserAnswer } from './even.js';
 
 // Получение рандомноq прогрессии в массиве
 
