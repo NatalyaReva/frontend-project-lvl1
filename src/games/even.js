@@ -23,7 +23,7 @@ const evenOrOdd = (result) => {
 
 // Вопрос-ответ с пользователем
 const questionAnswer = (nameUser) => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no" ');
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let i = 0;
   for (i; i < 3; i += 1) {
     const result = getRandomNumber();
