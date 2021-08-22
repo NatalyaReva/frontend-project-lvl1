@@ -25,12 +25,12 @@ const questionAnswer = (nameUser) => {
       console.log('Correct!');
     } else {
       console.log(`${answer} is wrong answer;(. Correct answer was ${getPrime(result)}`);
-      console.log(`Let's try  again, ${nameUser}`);
+      console.log(`Let's try again, ${nameUser}!`);
       break;
     }
   }
   if (i > 2) {
-    console.log(`Congratulations, ${nameUser}`);
+    console.log(`Congratulations, ${nameUser}!`);
   }
 };
 export default questionAnswer;
