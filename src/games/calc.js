@@ -29,4 +29,4 @@ export const startPlay = () => {
   return { question: question, correctAnswer: correctAnswer };
 };
 
-export default { startPlay };
+export default { startPlay, exercise };
