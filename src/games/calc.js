@@ -1,14 +1,7 @@
-import { getRandomNumber, getUserAnswer } from './even.js';
+import { getRandomNum } from '../utils.js';
 
 //  Рандомные операции с рандомными числами
-
-export const randomExpression = () => {
-  const a = getRandomNumber();
-  const b = getRandomNumber();
-  const operation = ['+', '-', '*'];
-  const indexOperation = Math.floor(Math.random() * operation.length);
-  const expression = `${a} ${operation[indexOperation]} ${b}`;
-  console.log(`Question: ${expression}`);
+const calculate = (a, b, indexOperation) => {
   let result;
   switch (indexOperation) {
     case 0:
@@ -23,22 +16,17 @@ export const randomExpression = () => {
   return result;
 };
 
-const questionResultExpression = (nameUser) => {
-  console.log('What is the result of the expression?');
-  let i = 0;
-  for (i; i < 3; i += 1) {
-    const result = randomExpression();
-    const answer = getUserAnswer();
-    if (Number(answer) === result) {
-      console.log('Correct!');
-    } else {
-      console.log(`${answer} is wrong answer;(. Correct answer was ${result}`);
-      console.log(`Let's try again, ${nameUser}!`);
-      break;
-    }
-  }
-  if (i > 2) {
-    console.log(`Congratulations, ${nameUser}!`);
-  }
+export const exercise = 'What is the result of the expression?';
+
+export const startPlay = () => {
+  const a = getRandomNum(1, 100);
+  const b = getRandomNum(1, 100);
+  const operation = ['+', '-', '*'];
+  const indexOperation = Math.floor(Math.random() * operation.length);
+  const expression = `${a} ${operation[indexOperation]} ${b}`;
+  const question = expression;
+  const correctAnswer = calculate(a, b, indexOperation);
+  return { question: question, correctAnswer: correctAnswer };
 };
-export default questionResultExpression;
+
+export default { startPlay };
