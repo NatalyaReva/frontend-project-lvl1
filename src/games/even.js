@@ -1,44 +1,18 @@
-import readlineSync from 'readline-sync';
-
-//  Вывод рандомного числа
-export const getRandomNumber = () => {
-  const randomNumber = Math.round(Math.random() * 101);
-  return randomNumber;
-};
-
-//  Получение ответа от пользователя
-export const getUserAnswer = () => {
-  const userAnswer = readlineSync.question('Your answer: ');
-
-  return userAnswer;
-};
+import { getRandomNum } from '../utils.js';
+import startGame from '../engine.js';
 
 // Определение четное или нечетное число
-const evenOrOdd = (result) => {
-  if (result % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
-};
+const evenOrOdd = (num) => num % 2 === 0;
 
-// Вопрос-ответ с пользователем
-const questionAnswer = (nameUser) => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no"');
-  let i = 0;
-  for (i; i < 3; i += 1) {
-    const result = getRandomNumber();
-    console.log(`Question: ${result}`);
-    const answer = getUserAnswer();
-    if (answer === evenOrOdd(result)) {
-      console.log('Correct!');
-    } else {
-      console.log(`${answer} is wrong answer;(. Correct answer was ${evenOrOdd(result)}`);
-      console.log(`Let's try again, ${nameUser}!`);
-      break;
-    }
-  }
-  if (i > 2) {
-    console.log(`Congratulations, ${nameUser}!`);
-  }
+// Задание
+export const exercise = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const startPlay = () => {
+  const num = getRandomNum(1, 20);
+  const correctAnswer = evenOrOdd(num) ? 'yes' : 'no';
+  const question = num.toString();
+  return { question, correctAnswer };
 };
-export default questionAnswer;
+export const playGameEven = () => {
+  startGame(exercise, startPlay);
+};
