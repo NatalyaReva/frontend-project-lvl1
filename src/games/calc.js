@@ -1,3 +1,4 @@
+import startGame from '../engine.js';
 import { getRandomNum } from '../utils.js';
 
 //  Рандомные операции с рандомными числами
@@ -26,7 +27,9 @@ export const startPlay = () => {
   const expression = `${a} ${operation[indexOperation]} ${b}`;
   const question = expression;
   const correctAnswer = calculate(a, b, indexOperation);
-  return { question: question, correctAnswer: correctAnswer };
+  return { question, correctAnswer };
 };
 
-export default { startPlay, exercise };
+export const playGameCalc = () => {
+  startGame(exercise, startPlay);
+};
