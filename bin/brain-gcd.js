@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 
-import greetings from '../src/greeting.js';
-import getUserName from '../src/cli.js';
-import questionNod from '../src/games/gcd.js';
+import { playGameGcd } from '../src/games/gcd.js';
 
-greetings();
-questionNod(getUserName());
+playGameGcd();
