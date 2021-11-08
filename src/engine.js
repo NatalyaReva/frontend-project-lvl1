@@ -10,8 +10,8 @@ const startGame = (exercise, startPlay) => {
   // const { question } = startPlay();
   for (let i = 1; i <= 3; i += 1) {
     const res = startPlay();
-    const question = res.question;
-    const correctAnswer = res.correctAnswer;
+    const { question } = res;
+    const { correctAnswer } = res;
     // вопрос пользователю
     console.log(`Question: ${question}`);
     // ответ пользователя
