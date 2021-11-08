@@ -1,11 +1,12 @@
-import { getRandomNumber, getUserAnswer } from './even.js';
+import { getRandomNum } from '../utils.js';
+import startGame from '../engine.js';
 
-// Получение рандомноq прогрессии в массиве
+// Получение рандомной прогрессии в массиве
 
 const getRandomArray = () => {
   const arr = [];
-  let a = Math.round(getRandomNumber() / 10);
-  const b = Math.round(getRandomNumber() / 10);
+  let a = getRandomNum(0, 10);
+  const b = getRandomNum(1, 10);
   for (let i = 1; i <= 10; i += 1) {
     arr.push(a);
     a += b;
@@ -21,28 +22,18 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max1 - min1)) + min1;
 }
 
-// Вопрос-ответ с пользователем
-const questionAnswer1 = (nameUser) => {
-  console.log('What number is missing in the progression?');
-  let i = 0;
-  for (i; i < 3; i += 1) {
-    const arr = getRandomArray();
-    const index = getRandomInt(0, arr.length - 1);
-    const closeNum = arr[index];
-    arr[index] = '..';
-    const progression = arr.join(' ');
-    console.log(`Question: ${progression}`);
-    const answer = getUserAnswer();
-    if (Number(answer) === closeNum) {
-      console.log('Correct!');
-    } else {
-      console.log(`${answer} is wrong answer;(. Correct answer was ${closeNum}`);
-      console.log(`Let's try again, ${nameUser}!`);
-      break;
-    }
-  }
-  if (i > 2) {
-    console.log(`Congratulations, ${nameUser}!`);
-  }
+export const exercise = 'What number is missing in the progression?';
+
+const startPlay = () => {
+  const arr = getRandomArray();
+  const index = getRandomInt(0, arr.length - 1);
+  const closedNum = arr[index];
+  arr[index] = '..';
+  const question = arr.join(' ');
+  const correctAnswer = closedNum.toString();
+  return { question, correctAnswer };
 };
-export default questionAnswer1;
+
+export const playGameClosedNumInProgression = () => {
+  startGame(exercise, startPlay);
+};
