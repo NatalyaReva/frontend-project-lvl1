@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import getUserName from '../src/cli.js';
-import greetings from '../src/greeting.js';
+import { getUserName, greetings } from '../src/utils.js';
 
 greetings();
 getUserName();
