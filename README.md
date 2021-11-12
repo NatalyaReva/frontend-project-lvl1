@@ -19,7 +19,7 @@ Clone this repository to your computer and in the project directory type the com
 ### Brain-gcd
 [![asciicast](https://asciinema.org/a/S6QOCHE4nZZnl85I1MgyslKNy.svg)](https://asciinema.org/a/S6QOCHE4nZZnl85I1MgyslKNy)
 ### Brain-progression
-[![asciicast](https://asciinema.org/a/TFSRJ8dOzh9e8QT7P2jX2kI2l.svg)](https://asciinema.org/a/TFSRJ8dOzh9e8QT7P2jX2kI2l)
+[![asciicast](https://asciinema.org/a/sqUA2nORibT1IfJsWjSSWLZf1.svg)](https://asciinema.org/a/sqUA2nORibT1IfJsWjSSWLZf1)
 
 
 
