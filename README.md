@@ -20,6 +20,8 @@ Clone this repository to your computer and in the project directory type the com
 [![asciicast](https://asciinema.org/a/S6QOCHE4nZZnl85I1MgyslKNy.svg)](https://asciinema.org/a/S6QOCHE4nZZnl85I1MgyslKNy)
 ### Brain-progression
 [![asciicast](https://asciinema.org/a/sqUA2nORibT1IfJsWjSSWLZf1.svg)](https://asciinema.org/a/sqUA2nORibT1IfJsWjSSWLZf1)
+### Brain-prime
+[![asciicast](https://asciinema.org/a/H4Tv3sS8r7SciCSDl5nCycbpx.svg)](https://asciinema.org/a/H4Tv3sS8r7SciCSDl5nCycbpx)
 
 
 
